@@ -1,0 +1,27 @@
+---
+
+- name: Container | Install containerd
+  apt:
+    pkg:
+      - containerd
+    update_cache: yes
+
+- name: Container | Create containerd directory
+  file:
+    path: /etc/containerd
+    state: directory
+
+- name: Container | Copy containerd config
+  copy:
+    src: config.toml
+    dest: /etc/containerd/config.toml
+
+- name: Container | Restart conatinerd service
+  service:
+    name: containerd
+    state: restarted
+
+- name: Container | Enable conatinerd service
+  service:
+    name: containerd
+    enabled: yes

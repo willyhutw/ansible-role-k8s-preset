@@ -1,0 +1,20 @@
+---
+
+galaxy_info:
+  author: willyhu
+  description: This is a Ansible role to install K8S by using kubeadm
+  company: 
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+    - name: Debian
+      versions:
+        - bookworm
+  galaxy_tags:
+    - kubernetes
+    - k8s
+    - kubeadm
+dependencies: []

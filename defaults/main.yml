@@ -1,0 +1,5 @@
+---
+
+KUBE_GPG_URL: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+KUBE_GPG_PATH: /etc/apt/keyrings/kubernetes-archive-keyring.gpg
+KUBE_PKG_VERSION: "1.26.6-00"
