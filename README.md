@@ -1,6 +1,6 @@
 # K8S ansible role
 
-This is a Ansible role to install K8S by using kubeadm
+This is a Ansible role to prepare K8S cluster environment.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Ansible 2.9
 ```yaml
 ### create the requirements.yml
 - src: git+https://github.com/willyhutw/ansible-role-k8s-preset.git
-  name: k8s
+  name: k8s-preset
 
 ### install role
 ansible-galaxy install -r requirements.yml -p ./roles
@@ -32,7 +32,5 @@ ansible-galaxy install -r requirements.yml -p ./roles
     - roles/k8s-preset
 
 ### run it!
-ansible-playbook -i '192.168.56.11, 192.168.56.12,' playbook.yml \
--e ansible_ssh_user=vagrant \
--e ansible_ssh_pass=vagrant
+ansible-playbook -i '192.168.56.11,192.168.56.12,192.168.56.13,' playbook.yml -e ansible_ssh_user=vagrant
 ```

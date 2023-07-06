@@ -2,7 +2,7 @@
 
 galaxy_info:
   author: willyhu
-  description: This is a Ansible role to install K8S by using kubeadm
+  description: This is a Ansible role to prepare K8S cluster environment.
   company: 
   license: "license (BSD, MIT)"
   min_ansible_version: 2.9
