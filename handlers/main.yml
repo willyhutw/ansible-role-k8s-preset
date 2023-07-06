@@ -1,0 +1,11 @@
+---
+
+- name: Restart conatinerd
+  service:
+    name: containerd
+    state: restarted
+
+- name: Restart conatinerd
+  service:
+    name: containerd
+    state: restarted

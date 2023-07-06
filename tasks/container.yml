@@ -6,6 +6,11 @@
       - containerd
     update_cache: yes
 
+- name: Container | Enable conatinerd service
+  service:
+    name: containerd
+    enabled: yes
+
 - name: Container | Create containerd directory
   file:
     path: /etc/containerd
@@ -15,13 +20,5 @@
   copy:
     src: config.toml
     dest: /etc/containerd/config.toml
-
-- name: Container | Restart conatinerd service
-  service:
-    name: containerd
-    state: restarted
-
-- name: Container | Enable conatinerd service
-  service:
-    name: containerd
-    enabled: yes
+  notify:
+    - Restart containerd
